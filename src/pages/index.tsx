@@ -6,12 +6,19 @@ import { VscGithubInverted } from 'react-icons/vsc'
 
 import { WelcomeContainer, PlantManagerInfo, UserInfo } from '../styles/pages/welcome';
 import { GetServerSideProps } from 'next';
+import Head from 'next/head';
 
-export default function Welcome() {
+export default function Login() {
   const router = useRouter()
 
   return (
     <WelcomeContainer>
+      <Head>
+        <title>
+          Login | PlantManager
+        </title>
+      </Head>
+
       <PlantManagerInfo>
         <h1>Gerencie suas plantas de forma fácil</h1>
         <img src="/ilustra.svg" alt="Ilustração regando as plantas" />
