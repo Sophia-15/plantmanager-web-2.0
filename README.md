@@ -1,34 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+    <img alt="PlantManager" title="PlantManager" src="https://raw.githubusercontent.com/birobirobiro/nlw-05-plantmanager/5a583f20d0e88fdf4afd88d1cee338e12556ccb4/.github/logo.svg" />
+</h1>
 
-## Getting Started
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-iniciando">Iniciando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p> 
 
-First, run the development server:
+
+## Demo
+
+<p  align="center">
+  <img src="https://user-images.githubusercontent.com/67246528/144736475-748ae437-27f6-4f53-a8e7-c0ade4cf19bb.jpeg"/>
+  <img src="https://user-images.githubusercontent.com/67246528/144736489-0af21aae-376b-47e9-8d88-19611e118276.jpeg"/>
+  <img src="https://user-images.githubusercontent.com/67246528/144736509-6a04273c-ce22-4368-a834-6cc67fd020a0.jpeg"/>
+  <img src="https://user-images.githubusercontent.com/67246528/144736512-d841ff4f-f1a0-426d-bf7c-79355cfdec90.jpeg"/>
+  <img src="https://user-images.githubusercontent.com/67246528/144736547-09619bad-2104-4eec-8013-cac8b041a1d0.jpeg"/>
+  <img src="https://user-images.githubusercontent.com/67246528/144736529-6c87edd0-068e-4584-8b07-1f5031936da5.jpeg"/>
+</p>
+
+
+<br>
+
+
+## 🧪 Tecnologias
+
+Esse projeto foi feito com as seguintes tecnologias.
+
+- [NextJS](https://nextjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled Components](https://styled-components.com)
+- [JSON Server](https://www.npmjs.com/package/json-server)
+
+
+## 🚀 Iniciando
+
+Clone esse projeto e acesse sua pasta
 
 ```bash
-npm run dev
-# or
-yarn dev
+$ git clone https://github.com/Sophia-15/plantmanager-web-next.git && cd plantmanager-web-next
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Siga os passos abaixo
+```bash
+# Instalar as dependências 
+$ yarn 
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 💻 Projeto
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Esse projeto foi feito na NLW 05 de React Native, então eu peguei a inspiração e fiz para ReactJS, totalmente responsivo. Futuramente pretendo adicionar um PWA para esse projeto. Clique [aqui](https://plantmanager-web.herokuapp.com) para testar a aplicação.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## 🔖 Layout
 
-To learn more about Next.js, take a look at the following resources:
+Veja o layout no link abaixo (inspiração para o layout web):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Layout](https://www.figma.com/file/IhQRtrOZdu3TrvkPYREzOy/PlantManager) 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Você precisa de uma conta no [Figma](http://figma.com/) para acessar.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Made with 💜 by [Sophia Gallindo](https://www.github.com/sophia-15) 👋 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
