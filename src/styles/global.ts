@@ -24,6 +24,17 @@ export const GlobalStyle = createGlobalStyle`
     outline: none;
   }
 
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: ${({theme}) => theme.colors.background};
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({theme}) => theme.colors.green};
+    border-radius: 6px;
+  }
+
   //Global medias
   @media (max-width: 1080px) {
     html {
