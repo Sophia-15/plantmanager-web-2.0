@@ -13,13 +13,18 @@ const showMenu = keyframes`
 `;
 
 export const HeaderContainer = styled.header`
- height: 80px;
+  height: 80px;
   padding: .875rem 8.6%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid ${({theme}) => theme.colors.greenLight};
   width: 100%;
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
 
   img {
     width: 17.25rem;
@@ -39,6 +44,41 @@ export const HeaderContainer = styled.header`
     li {
       cursor: pointer;
       color: ${({theme}) => theme.colors.bodyDark};
+    }
+  }
+
+  .userContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: ${({theme}) => theme.colors.green};
+    border-radius: 50%;
+    padding: 2px;
+
+    margin-left: 1rem;
+
+    img {
+      border: 2px solid ${({theme}) => theme.colors.background};
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+    }
+  }
+
+  .logoutButton {
+    display: block;
+    background-color: transparent;
+    transition: filter .2s;
+    margin-top: 2%;
+    margin-left: 1rem;
+
+    svg {
+      color: ${({theme}) => theme.colors.green};
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      filter: brightness(0.8);
     }
   }
 

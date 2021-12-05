@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Router from 'next/router';
 
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { api } from '../services/api';
 import { Header } from '../components/Header';
 import { EnvironmentButton } from '../components/EnvironmentButton';
 import { SelectPlantCard } from '../components/SelectPlantCard';
 import { NewPlantContainer } from '../styles/pages/new';
 import Head from 'next/head';
+import { getSession } from 'next-auth/react';
 
 interface EnvironmentProps {
   key: string;
@@ -97,12 +98,11 @@ export default function NewPlant({
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { data: plantEnvironments } = await api.get<EnvironmentProps[]>('/plants_environments');
-
   const { data } = await api.get<PlantProps>('/plants');
-
   const plants = data;
+  const session = await getSession(ctx)
 
   const environments = [
     {
@@ -111,6 +111,16 @@ export const getStaticProps: GetStaticProps = async () => {
     },
     ...plantEnvironments,
   ];
+
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/', 
+        permanent: false
+      }
+    }
+  }
 
   return {
     props: {

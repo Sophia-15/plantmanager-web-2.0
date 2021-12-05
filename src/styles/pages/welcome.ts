@@ -79,5 +79,18 @@ export const UserInfo = styled.section`
     color: ${({ theme }) => theme.colors.white};
     font-weight: 500;
     border-radius: 1rem;
+    transition: transform 0.5s;
+
+    display: flex;
+    align-items: center;
+    
+    svg {
+      margin-left: .3rem;
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+    }
   }
 `;

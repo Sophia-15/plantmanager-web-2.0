@@ -13,6 +13,7 @@ import { parseCookies, setCookie } from 'nookies';
 
 import { MyPlantsContainer, Plant } from '../styles/pages/myplants'
 import Head from 'next/head';
+import { getSession, useSession } from 'next-auth/react';
 
 type Plant = {
   id: string;
@@ -44,6 +45,7 @@ export default function MyPlants({ nextWateredPlant, plantsSorted }: MyPlantsPro
   const [plants, setPlants] = useState<Plant[]>(plantsSorted);
   const [showModal, setShowModal] = useState(false);
   const [modalPlant, setModalPlant] = useState<Plant>();
+  const { data: session } = useSession()
 
   function handleRemovePlant(deletedPlant: Plant | undefined) {
     if (deletedPlant) {
@@ -84,7 +86,7 @@ export default function MyPlants({ nextWateredPlant, plantsSorted }: MyPlantsPro
           <h2>
             Plantinhas de
             {' '}
-            {/* {user} */}
+            {session?.user?.name}
           </h2>
           <div className="plants-container">
             {plants.length > 0 ? plants.map((plant) => (
@@ -159,8 +161,16 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
   const nextWateredPlant = `Regue sua ${plantsSorted[0].name} daqui a ${nextWateredTime}`
 
-  if (plantsSorted.length <= 0) {
-    return
+  const session = await getSession(ctx)
+  console.log(session?.user)
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: '/', 
+        permanent: false
+      }
+    }
   }
 
   return {
